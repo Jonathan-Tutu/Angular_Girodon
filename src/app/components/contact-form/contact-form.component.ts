@@ -25,13 +25,16 @@ export class ContactFormComponent {
   OnSubmit(): void {
     if(this.form.valid)
     {
-      this.dialog.open(DialogDataComponent, {
+      this.dialog.open(DialogDataComponent, 
+      {
         data: {
-          animal: 'panda',
+          mail: this.form.value.mail,
+          firstname: this.form.value.firstName,
+          lastname: this.form.value.lastName,
+          message: this.form.value.textArea
         },
       });
     }
   }
-  //mail = new FormControl('', [Validators.required, Validators.email]);
 
 }
