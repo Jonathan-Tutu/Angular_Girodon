@@ -19,13 +19,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule} from '@angular/material/dialog';
+import { DialogDataComponent } from './components/dialog-data/dialog-data.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    DialogDataComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

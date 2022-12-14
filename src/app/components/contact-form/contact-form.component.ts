@@ -1,34 +1,37 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormBuilder , Validators } from '@angular/forms';
+import { MatDialog} from '@angular/material/dialog';
+import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 
 @Component({
   selector: 'contact',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
+
 export class ContactFormComponent {
 
-    pattern = "^[a-zA-Z0-9]{1,64}@[a-zA-Z0-9]{1,64}.[a-zA-Z0-9]{1,3}" ;
-    addressForm = this.fb.group({
-    mail: [null, Validators.required, Validators.pattern],
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    textArea: [null, Validators.required]
+    pattern = "^[a-zA-Z0-9-.]{1,64}@[a-zA-Z0-9]{1,64}.[a-zA-Z0-9]{1,3}" ;
+
+    form = this.fb.group({
+    mail: ['', Validators.required],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    textArea: ['', Validators.required]
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, public dialog: MatDialog) { }
 
-  onSubmit(): void {
-    alert(this.addressForm.value.mail);
-  }
-
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
+  OnSubmit(): void {
+    if(this.form.valid)
+    {
+      this.dialog.open(DialogDataComponent, {
+        data: {
+          animal: 'panda',
+        },
+      });
     }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
   }
+  //mail = new FormControl('', [Validators.required, Validators.email]);
+
 }
