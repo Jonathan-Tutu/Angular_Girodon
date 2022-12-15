@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{productItem.name}}</mat-card-title>
+    </mat-card-header>
+    <div class="imgproduct">
+        <img mat-card-image src="{{productItem.imageUrl}}" alt="Photo of a product">
+    </div>
+    <mat-card-content>
+      <div class="price" style="margin-top: 15px; max-height: 38px;">
+        <h2 style="display:inline-block">{{productItem.price | currency:'EUR' }}</h2>
+        <span style="font-size: 20px; color: #FAD000; float: right;">{{productItem.rating}} </span> <!--Inline + add variable instead of stars-->
+      </div>
+      <mat-card-subtitle>{{productItem.description}}</mat-card-subtitle>
+      <div style="margin-top: 10px">
+        <label>Quantité : </label>
+        <input type="number" min="0" max="100" value="0">
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="cardContent">
+      <button mat-button class="buyButton">Buy</button>
+    </mat-card-actions>
+  </mat-card>

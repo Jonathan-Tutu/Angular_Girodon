@@ -21,7 +21,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DialogDataComponent } from './components/dialog-data/dialog-data.component';
-
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home-component/home-component.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { DialogDataComponent } from './components/dialog-data/dialog-data.compon
     AppComponent,
     ToolbarComponent,
     ContactFormComponent,
-    DialogDataComponent
+    DialogDataComponent,
+    ProductListComponent,
+    ProductItemComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,8 @@ import { DialogDataComponent } from './components/dialog-data/dialog-data.compon
     MatSelectModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

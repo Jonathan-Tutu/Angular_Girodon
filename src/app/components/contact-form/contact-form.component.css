@@ -25,13 +25,32 @@
     margin-right: 0;
   }
   
-  .formm {
+  .formPos {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 11%;
   }
 
   .titleform {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    font-size: 50px;
   }
+
+  .mat-mdc-card {
+    box-shadow: 
+    0px 2px 1px -1px rgb(0 0 0 / 40%),
+    0px 1px 1px 0px rgb(0 0 0 / 25%), 
+    0px 1px 3px 0px rgb(0 0 0 / 25%);
+  
+  }
+
+  ::ng-deep .mdc-dialog__surface {
+    background-color: rgb(173, 173, 179) !important;
+ } 
+
+
+
+
+
+

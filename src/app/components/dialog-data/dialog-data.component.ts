@@ -1,14 +1,6 @@
 import { Component,  Inject } from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-/*
-export interface DialogData {
-  formvalues_mail: string ;
-  formvalues_firstname: string;
-  formvalues_last_name: string;
-  formvalues_message: string;
-}*/
-
 @Component({
   selector: 'dialog-data',
   templateUrl: './dialog-data.component.html',

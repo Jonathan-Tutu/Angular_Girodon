@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder , Validators } from '@angular/forms';
+import { FormBuilder , Validators} from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
 import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 
@@ -11,6 +11,7 @@ import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 
 export class ContactFormComponent {
 
+    isActive = true;
     pattern = "^[a-zA-Z0-9-.]{1,64}@[a-zA-Z0-9]{1,64}.[a-zA-Z0-9]{1,3}" ;
 
     form = this.fb.group({
@@ -25,6 +26,7 @@ export class ContactFormComponent {
   OnSubmit(): void {
     if(this.form.valid)
     {
+      console.log("Form Submitted")
       this.dialog.open(DialogDataComponent, 
       {
         data: {
@@ -33,7 +35,17 @@ export class ContactFormComponent {
           lastname: this.form.value.lastName,
           message: this.form.value.textArea
         },
+        panelClass: 'custom-modalbox'
+        //width: '50%', 
+        //height: '50%', 
       });
+      this.form.reset();
+
+      //Enlève les errors des validators après le reset (Pas très propre)
+      this.form.controls['mail'].setErrors(null);
+      this.form.controls['firstName'].setErrors(null);
+      this.form.controls['lastName'].setErrors(null);
+      this.form.controls['textArea'].setErrors(null);
     }
   }
 
