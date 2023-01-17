@@ -2,26 +2,22 @@
   max-width: 400px;
 }
 
-.buyButton
-{
+.buyButton {
   background-color: #2196F3;
   width: 97%;
   margin: auto;
 }
 
-.mat-mdc-card-header
-{
+.mat-mdc-card-header {
   padding: 5px 10px 0;
 }
 
 
-.imgproduct
-{
+.imgproduct {
   text-align: center;
 }
 
-.mdc-card__media
-{
+.mdc-card__media {
   width: 200px;
   height: 322px;
   object-fit: cover;

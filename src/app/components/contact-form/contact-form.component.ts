@@ -12,14 +12,14 @@ import { DialogDataComponent } from '../dialog-data/dialog-data.component';
 export class ContactFormComponent {
 
     isActive = true;
-    pattern = "^[a-zA-Z0-9-.]{1,64}@[a-zA-Z0-9]{1,64}.[a-zA-Z0-9]{1,3}" ;
+    pattern = "^[a-zA-Z0-9-.]{1,64}@[a-zA-Z0-9]{1,64}.[a-zA-Z0-9]{1,3}";
 
     form = this.fb.group({
-    mail: ['', Validators.required],
-    firstName: ['', Validators.required],
-    lastName: ['', Validators.required],
-    textArea: ['', Validators.required]
-  });
+        mail: ['', Validators.required],
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        textArea: ['', Validators.required]
+    });
 
   constructor(private fb: FormBuilder, public dialog: MatDialog) { }
 
@@ -36,12 +36,10 @@ export class ContactFormComponent {
           message: this.form.value.textArea
         },
         panelClass: 'custom-modalbox'
-        //width: '50%', 
-        //height: '50%', 
       });
       this.form.reset();
 
-      //Enlève les errors des validators après le reset (Pas très propre)
+      //Enlèves les erreurs des validateurs après le reset (Pas très propre)
       this.form.controls['mail'].setErrors(null);
       this.form.controls['firstName'].setErrors(null);
       this.form.controls['lastName'].setErrors(null);
