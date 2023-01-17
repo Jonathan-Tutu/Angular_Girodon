@@ -6,9 +6,10 @@ import { HomeComponent } from './components/home-component/home-component.compon
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'first-component', component: ContactFormComponent},
-  { path: 'second-component', component: ProductListComponent},
+  { path: '', component: HomeComponent },
+  { path: 'contact-form', component: ContactFormComponent },
+  { path: 'product-list', component: ProductListComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
