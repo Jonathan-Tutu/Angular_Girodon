@@ -46,10 +46,14 @@ export class OrderListDataSource extends DataSource<Order> {
         return data.sort((a, b) => {
             const isAsc = this.sort?.direction === 'asc';
             switch (this.sort?.active) {
-                case 'name':
-                    return compare(a.name, b.name, isAsc);
                 case 'id':
                     return compare(+a.id, +b.id, isAsc);
+                case 'ref':
+                    return compare(a.ref, b.ref, isAsc);
+                case 'date':
+                    return compare(a.date, b.date, isAsc);
+                case 'price':
+                    return compare(a.price, b.price, isAsc);
                 default:
                     return 0;
             }

@@ -1,4 +1,8 @@
 export interface Order {
     id: number;
-    name: string;
+    ref: string;
+    products: Array<{id: number, quantity: number}>
+    user: number
+    date: string
+    price: number
 }

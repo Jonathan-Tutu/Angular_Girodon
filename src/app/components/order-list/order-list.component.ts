@@ -17,7 +17,7 @@ export class OrderListComponent implements OnInit {
     @ViewChild(MatTable) table!: MatTable<Order>;
 
     dataSource: OrderListDataSource = new OrderListDataSource();
-    displayedColumns = ['id', 'name'];
+    displayedColumns = ['id', 'ref', 'date', 'price'];
 
     constructor(private orderService: OrderService) {
     }
