@@ -23,8 +23,8 @@
           <div class="order-description">
             <div>Achat effectué par l'utilisateur : {{order.user.firstname}} {{order.user.lastname}}</div>
             <div>Produits achetés :</div>
-            <div *ngFor="let product of order.products">
-              <div class="product-description">Id Produit : {{product.id}}, Quantité : {{product.quantity}}</div>
+            <div *ngFor="let orderProduct of order.products">
+              <div class="product-description">Produit : {{orderProduct.product.name}} à {{orderProduct.product.price}} €, Quantité : {{orderProduct.quantity}}</div>
             </div>
           </div>
         </div>
