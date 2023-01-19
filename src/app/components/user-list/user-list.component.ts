@@ -17,6 +17,7 @@ export class UserListComponent implements OnInit {
     @ViewChild(MatTable) table!: MatTable<User>;
 
     dataSource: UserListDataSource = new UserListDataSource();
+    length: number = 0;
     displayedColumns = ['id', 'name'];
 
     constructor(private userService: UserService) {
@@ -25,6 +26,7 @@ export class UserListComponent implements OnInit {
     ngOnInit(): void {
         this.userService.getUsers().subscribe((users) => {
             this.dataSource.data = users;
+            this.length = this.dataSource.data.length;
             this.dataSource.sort = this.sort;
             this.dataSource.paginator = this.paginator;
             this.table.dataSource = this.dataSource;

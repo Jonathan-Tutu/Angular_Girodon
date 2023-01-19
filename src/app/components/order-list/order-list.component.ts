@@ -25,6 +25,7 @@ export class OrderListComponent implements OnInit {
     @ViewChild(MatTable) table!: MatTable<Order>;
 
     dataSource: OrderListDataSource = new OrderListDataSource();
+    length: number = 0;
     displayedColumns = ['id', 'ref', 'date', 'price'];
     columnsToDisplayWithExpand = [...this.displayedColumns, 'expand'];
     expandedOrder: Order | null | undefined;
@@ -35,6 +36,7 @@ export class OrderListComponent implements OnInit {
     ngOnInit(): void {
         this.orderService.getOrders().subscribe((orders) => {
             this.dataSource.data = orders;
+            this.length = this.dataSource.data.length;
             this.dataSource.sort = this.sort;
             this.dataSource.paginator = this.paginator;
             this.table.dataSource = this.dataSource;
