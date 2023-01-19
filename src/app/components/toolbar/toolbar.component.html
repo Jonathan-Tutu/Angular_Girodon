@@ -1,14 +1,16 @@
 <mat-toolbar color="primary">
 
-<img src="https://cdn.icon-icons.com/icons2/2845/PNG/512/logitech_logo_icon_181377.png" alt="" style="width:50px; margin-right: 5px;">
-<a mat-button routerLink="" routerLinkActive="active" style="font-size:20px">Let's play</a>
+<a routerLink="" routerLinkActive="active">
+  <img src="assets/logo.png" alt="Let's Play">
+</a>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 <div class="spacer"></div>
-  <a mat-button routerLink="/second-component" routerLinkActive="active">Nos Produits</a>
-  <a mat-button routerLink="#">Liste utilisateur</a>
-  <a mat-button routerLink="/first-component" routerLinkActive="active">Contact</a>
+  <a mat-button routerLink="/product-list" routerLinkActive="active">Produits</a>
+  <a mat-button routerLink="/user-list">Utilisateurs</a>
+  <a mat-button routerLink="/order-list">Commandes</a>
+  <a mat-button routerLink="/contact-form" routerLinkActive="active">Contact</a>
   <button mat-icon-button >
     <span class="material-symbols-outlined">
       shopping_cart_checkout

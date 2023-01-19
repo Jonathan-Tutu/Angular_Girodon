@@ -1,19 +1,16 @@
-.center 
-{
+.center {
     margin: 26%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title
-{
+.title {
     height:300px;
     position:absolute;
 }
 
-.button
-{
+.button {
     background-color: #2196F3;
     border-radius: 30px;
 }

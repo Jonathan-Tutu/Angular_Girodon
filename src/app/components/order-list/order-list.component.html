@@ -1,0 +1,50 @@
+<div class="mat-elevation-z8">
+  <table mat-table class="full-width-table" matSort multiTemplateDataRows aria-label="orders">
+
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+      <td mat-cell *matCellDef="let order"> {{column == "price" ? order[column] + " €" : order[column]}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="expand">
+      <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
+      <td mat-cell *matCellDef="let order">
+        <button mat-icon-button aria-label="expand row" (click)="(expandedOrder = expandedOrder === order ? null : order); $event.stopPropagation()">
+          <mat-icon *ngIf="expandedOrder !== order">keyboard_arrow_down</mat-icon>
+          <mat-icon *ngIf="expandedOrder === order">keyboard_arrow_up</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Expanded Content Column -->
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let order" [attr.colspan]="columnsToDisplayWithExpand.length">
+        <div class="order-detail" [@detailExpand]="order == expandedOrder ? 'expanded' : 'collapsed'">
+          <div class="order-description">
+            <div>Achat effectué par l'utilisateur : {{order.user.firstname}} {{order.user.lastname}}</div>
+            <div>Produits achetés :</div>
+            <div *ngFor="let orderProduct of order.products">
+              <div class="product-description">Produit : {{orderProduct.product.name}} à {{orderProduct.product.price}} €, Quantité : {{orderProduct.quantity}}</div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+    <tr mat-row *matRowDef="let order; columns: columnsToDisplayWithExpand;"
+        class="order-row"
+        [class.expanded-row]="expandedOrder === order"
+        (click)="expandedOrder = expandedOrder === order ? null : order">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 20]"
+      aria-label="Select page">
+  </mat-paginator>
+</div>
