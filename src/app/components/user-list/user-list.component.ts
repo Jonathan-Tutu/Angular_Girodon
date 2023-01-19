@@ -18,7 +18,7 @@ export class UserListComponent implements OnInit {
 
     dataSource: UserListDataSource = new UserListDataSource();
     length: number = 0;
-    displayedColumns = ['id', 'name'];
+    displayedColumns = ['id', 'firstname', 'lastname', 'city'];
 
     constructor(private userService: UserService) {
     }
