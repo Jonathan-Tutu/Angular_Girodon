@@ -9,7 +9,7 @@
             <p>{{ product.description }}</p>
         </div>
         <div class="product-price-btn">
-            <p>{{ product.price | currency }}</p>
+            <p>{{ product.price | currency:'EUR' }}</p>
             <div>
                 <label>Quantité : </label>
                 <input type="number" min="0" max="100" value="0">
