@@ -31,6 +31,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { ColumnHeaderPipe } from './pipes/column-header.pipe';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     HomeComponent,
     UserListComponent,
     OrderListComponent,
+    ColumnHeaderPipe,
   ],
     imports: [
         BrowserModule,

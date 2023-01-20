@@ -2,7 +2,7 @@
   <table mat-table class="full-width-table" matSort multiTemplateDataRows aria-label="orders">
 
     <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header=""> {{column}} </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""> {{column | columnHeader}} </th>
       <td mat-cell *matCellDef="let order"> {{column == "price" ? order[column] + " €" : order[column]}} </td>
     </ng-container>
 
