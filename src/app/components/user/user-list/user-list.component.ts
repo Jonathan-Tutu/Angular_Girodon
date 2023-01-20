@@ -2,9 +2,9 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
-import {UserService} from "../../services/user.service";
+import {UserService} from "../../../services/user.service";
 import {UserListDataSource} from "./user-list-datasource";
-import {User} from "../../models/user";
+import {User} from "../../../models/user";
 
 @Component({
     selector: 'app-user-list',

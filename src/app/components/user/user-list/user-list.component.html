@@ -3,7 +3,7 @@
 
     <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns">
       <th mat-header-cell *matHeaderCellDef mat-sort-header=""> {{column | columnHeader}} </th>
-      <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      <td mat-cell *matCellDef="let user" [routerLink]="['/user', user.id]">{{user[column]}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

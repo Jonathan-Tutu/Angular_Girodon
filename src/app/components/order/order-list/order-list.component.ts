@@ -3,8 +3,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
 import {OrderListDataSource} from './order-list-datasource';
-import {Order} from "../../models/order";
-import {OrderService} from "../../services/order.service";
+import {Order} from "../../../models/order";
+import {OrderService} from "../../../services/order.service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({

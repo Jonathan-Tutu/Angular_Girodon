@@ -3,11 +3,11 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {map} from 'rxjs/operators';
 import {Observable, of as observableOf, merge} from 'rxjs';
-import {Order} from "../../models/order";
-import {compare} from "../../functions/compare";
+import {User} from "../../../models/user";
+import {compare} from "../../../functions/compare";
 
-export class OrderListDataSource extends DataSource<Order> {
-    data: Order[] = [];
+export class UserListDataSource extends DataSource<User> {
+    data: User[] = [];
     paginator: MatPaginator | undefined;
     sort: MatSort | undefined;
 
@@ -15,7 +15,7 @@ export class OrderListDataSource extends DataSource<Order> {
         super();
     }
 
-    connect(): Observable<Order[]> {
+    connect(): Observable<User[]> {
         if (this.paginator && this.sort) {
             return merge(observableOf(this.data), this.paginator.page, this.sort.sortChange)
                 .pipe(map(() => {
@@ -29,7 +29,7 @@ export class OrderListDataSource extends DataSource<Order> {
     disconnect(): void {
     }
 
-    private getPagedData(data: Order[]): Order[] {
+    private getPagedData(data: User[]): User[] {
         if (this.paginator) {
             const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
             return data.splice(startIndex, this.paginator.pageSize);
@@ -38,7 +38,7 @@ export class OrderListDataSource extends DataSource<Order> {
         }
     }
 
-    private getSortedData(data: Order[]): Order[] {
+    private getSortedData(data: User[]): User[] {
         if (!this.sort || !this.sort.active || this.sort.direction === '') {
             return data;
         }
@@ -48,12 +48,12 @@ export class OrderListDataSource extends DataSource<Order> {
             switch (this.sort?.active) {
                 case 'id':
                     return compare(+a.id, +b.id, isAsc);
-                case 'ref':
-                    return compare(a.ref, b.ref, isAsc);
-                case 'date':
-                    return compare(a.date, b.date, isAsc);
-                case 'price':
-                    return compare(a.price, b.price, isAsc);
+                case 'firstname':
+                    return compare(a.firstname, b.firstname, isAsc);
+                case 'lastname':
+                    return compare(a.lastname, b.lastname, isAsc);
+                case 'city':
+                    return compare(a.city, b.city, isAsc);
                 default:
                     return 0;
             }
