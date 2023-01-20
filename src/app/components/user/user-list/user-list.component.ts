@@ -24,7 +24,7 @@ export class UserListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.userService.getUsers().subscribe((users) => {
+        this.userService.getUsers().subscribe((users: User[]) => {
             this.dataSource.data = users;
             this.length = this.dataSource.data.length;
             this.dataSource.sort = this.sort;

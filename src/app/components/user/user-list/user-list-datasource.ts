@@ -43,17 +43,17 @@ export class UserListDataSource extends DataSource<User> {
             return data;
         }
 
-        return data.sort((a, b) => {
+        return data.sort((user1: User, user2: User) => {
             const isAsc = this.sort?.direction === 'asc';
             switch (this.sort?.active) {
                 case 'id':
-                    return compare(+a.id, +b.id, isAsc);
+                    return compare(+user1.id, +user2.id, isAsc);
                 case 'firstname':
-                    return compare(a.firstname, b.firstname, isAsc);
+                    return compare(user1.firstname, user2.firstname, isAsc);
                 case 'lastname':
-                    return compare(a.lastname, b.lastname, isAsc);
+                    return compare(user1.lastname, user2.lastname, isAsc);
                 case 'city':
-                    return compare(a.city, b.city, isAsc);
+                    return compare(user1.city, user2.city, isAsc);
                 default:
                     return 0;
             }
