@@ -2,8 +2,13 @@
   max-width: 400px;
 }
 
-.buyButton {
-  background-color: #2196F3;
+.rating {
+  font-size: 20px;
+  color: #FAD000;
+  float: right;
+}
+
+button {
   width: 97%;
   margin: auto;
 }
@@ -13,7 +18,7 @@
 }
 
 
-.imgproduct {
+.product-img {
   text-align: center;
 }
 

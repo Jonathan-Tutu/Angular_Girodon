@@ -2,7 +2,7 @@
   {  
     "id": 1,  
     "name": "MOUSE CORSAIR M65",  
-    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",  
+    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne.",
     "price": 100,
     "imageUrl": "https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png",
     "rating":"★★★★★"
@@ -10,7 +10,7 @@
   {  
     "id": 2,  
     "name": "LOGITECH G502 LIGHTSPEED",
-    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+    "description": "Profitez de son approche féroce pour gagner vos parties de jeu en ligne. Meilleur rapport qualité/prix.",
     "price": 100,
     "imageUrl": "https://boulanger.scene7.com/is/image/Boulanger/5099206082106_h_f_l_0?wid=500&hei=500",
     "rating":"★★★★★"   
@@ -18,7 +18,7 @@
   {  
     "id": 3,  
     "name": "RAZER NAGA X",
-    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+    "description": "L'une des meilleures souris jamais inventé. Beaucoup mieux que celle à 100€ !",
     "price": 200,
     "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/77/55/LD0005775513_1.jpg",
     "rating":"★★★★★" 
@@ -26,7 +26,7 @@
   {  
     "id": 4,  
     "name": "LOGITECH G PRO",
-    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne.",
     "price": 300,
     "imageUrl": "https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png",
     "rating":"★★★★"   
@@ -34,7 +34,7 @@
   {  
     "id": 5,  
     "name": "MOUSE CORSAIR M65",  
-    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+    "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne.",
     "price": 450,
     "imageUrl": "https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png",
     "rating":"★★★" 
@@ -42,7 +42,7 @@
   {  
   "id": 6,  
   "name": "MOUSE CORSAIR M65",  
-  "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+  "description": "Profitez de son approche féroce pour gagner vos parties de jeu en ligne. Un peu cher mais une qualité exceptionnelle !",
   "price": 450,
   "imageUrl": "https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png",
   "rating":"★★★" 
@@ -50,7 +50,7 @@
   {  
   "id": 7,  
   "name": "MOUSE CORSAIR M65",  
-  "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+  "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne.",
   "price": 450,
   "imageUrl": "https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png",
   "rating":"★★★" 
@@ -58,7 +58,7 @@
   {  
   "id": 8,  
   "name": "MOUSE CORSAIR M65",  
-  "description": "L'une des meilleures souris jamais inventé. Profitez de son approche féroce pour gagner vos parties de jeu en ligne",
+  "description": "Profitez de son approche féroce pour gagner vos parties de jeu en ligne. Un peu cher mais une qualité exceptionnelle !",
   "price": 450,
   "imageUrl": "https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png",
   "rating":"★★★" 

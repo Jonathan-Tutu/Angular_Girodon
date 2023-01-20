@@ -5,9 +5,8 @@
 
 .cardComp {
   margin: 50px;
-  box-shadow: 10 10 20;
 }
 
-.mat-mdc-card-header {
-  padding: 10 10 0;
+h1 {
+  margin: 20px 0 0 20px;
 }

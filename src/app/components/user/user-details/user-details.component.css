@@ -1,0 +1,41 @@
+.wrapper {
+    height: 430px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.user-img {
+    float: left;
+}
+
+.user-img img {
+    margin: 50px 40px;
+    width: 200px;
+    height: 322px;
+    object-fit: cover;
+}
+
+.user-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+}
+
+.user-text {
+    margin-top: 45px;
+    line-height: 1.7em;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.user-text h1 {
+    padding-top: 52px;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+.user-text p {
+    font-size: 18px;
+}

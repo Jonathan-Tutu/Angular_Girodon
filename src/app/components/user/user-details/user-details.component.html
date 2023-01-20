@@ -1,0 +1,16 @@
+<div class="wrapper" *ngIf="user">
+    <div class="user-img">
+        <img mat-card-image src="assets/user.png" alt="Photo of a user">
+    </div>
+    <div class="user-info">
+        <div class="user-text">
+            <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+
+            <div>
+                <p>Résident au {{ user.streetNumber }} {{ user.street }}</p>
+                <p>Ville : {{ user.city }}</p>
+                <p>Contact : {{ user.phone }}</p>
+            </div>
+        </div>
+    </div>
+</div>
