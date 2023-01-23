@@ -45,7 +45,7 @@
 }
 
 ::ng-deep .mdc-dialog__surface {
-  background-color: rgb(173, 173, 179) !important;
+  padding: 20px;
 }
 
 
